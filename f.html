@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+     
+
+</body>
+<script>
+    var perarray = [{
+            personID: 123,
+            name: "askasdsadk",
+            city: "mela",
+            phone: "1212122123"
+        },
+        {
+            personID: 124,
+            name: "asasdksad",
+            city: "mela",
+            phone: "1212122123"
+        },
+        {
+            personID: 125,
+            name: "aslsal",
+            city: "mela",
+            phone: "1212122123"
+        },
+        {
+            personID: 126,
+            name: "salsal",
+            city: "mela",
+            phone: "1212122123"
+        }
+    ];
+    console.log(perarray);
+
+    var json = JSON.stringify(perarray);
+    console.log(json)
+
+    perarray.forEach(function (pio) {
+        pios(pio);
+    });
+
+    function pios(pio) {
+        var table = document.createElement('table');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('tr');
+           
+
+          //  td.innerHTML = pio.personID; td1.innerHTML = pio.name; td2.innerHTML = pio.city; td3.innerHTML = pio
+            //.phone;
+//<table><tr><td > "+ pio.personID+" < /td><td > Celda 2 < /td><td > Celda 3 < /td></tr> </table>
+
+            document.body.appendChild(table);
+        }
+</script>
+
+</html>

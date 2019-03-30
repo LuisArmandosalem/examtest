@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body >
+    <ul>
+        <li id="C1" onclick="li()" data-id="US" data-dial-code="1">USA</li>
+        <li id="C2" onclick="li()" data-id="CA" data-dial-code="2">CANADA</li>
+        <li id="C3" onclick="li()" data-id="FF" data-dial-code="3">FRANCE</li>
+    </ul>
+
+</body>
+<Script>
+    function li() {
+        var hijos = document.querySelectorAll("ul > li ");
+
+        for (unHijo of hijos) {
+            unHijo.addEventListener("click", function (evt) {
+       
+                let atributo = this.getAttribute("id");
+                let atributo1 = this.getAttribute("data-id");
+                let atributo2 = this.getAttribute("data-dial-code");
+               
+                alert("elemento "+ atributo +" "+atributo1+" "+atributo2);
+                
+            });
+        }
+    }
+  // li();
+</Script>
+
+</html>

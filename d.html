@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+       d) Dado el siguiente arreglo de objetos:
+        let people = [{ name: "bob", id=1 }, { name: "john", id=2 },  { name: "alex", id=3 }, { name: "john", id=3 }
+        ];
+        Genera la función para obtener el numero de veces que aparece cada nombre. 
+        Genera la función para imprimir en consola el numero máximo y el numero mínimo.
+
+        */
+    let peoples = [{
+        name: "bob",
+        id: 1
+    }, {
+        name: "john",
+        id: 2
+    }, {
+        name: "alex",
+        id: 3
+    }, {
+        name: "john",
+        id: 4
+    }];
+
+
+    let names = peoples.map((people) => {
+        return people.name;
+    })
+    let maxandmin = peoples.map((people) => {
+        return people.id;
+    })
+    let count = names.reduce((cont, nombre) => {
+        cont[nombre] = (cont[nombre] || 0) + 1;
+        return cont
+    }, {});
+    var max = Math.max(...maxandmin);
+    var min = Math.min(...maxandmin);
+    console.log( "maximo "+max)
+    console.log("minimo "+ min)
+    console.log(count)
+</script>
+
+</html>

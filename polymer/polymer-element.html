@@ -1,0 +1,54 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="polymer-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+    <ul>
+      <li id="C1" data-id="US" data-dial-code="1" on-click="getData">USA</li>
+      <li id="C2" data-id="CA" data-dial-code="2" on-click="getData">Canada</li>
+      <li id="C3" data-id="FF" data-dial-code="3" on-click="getData">France</li>
+    </ul>
+  </template>
+
+  <script>
+    /**
+     * `polymer-element`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PolymerElement extends Polymer.Element {
+      static get is() {
+        return 'polymer-element';
+      }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'polymer-element'
+          }
+        };
+      }
+      getData(data) {
+        let id = data.path[0].attributes[0].value;
+        let dataId = data.path[0].attributes[1].value;
+        let dataDialCode = data.path[0].attributes[2].value;
+        alert(id+"  "+"  "+dataId+"  "+dataDialCode );
+
+        console.log(e.path[0].attributes[0].value);
+        console.log(e.path[0].attributes[1].value);
+        console.log(e.path[0].attributes[2].value);
+      }
+    }
+    
+
+    window.customElements.define(PolymerElement.is, PolymerElement);
+  </script>
+</dom-module>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+    c) Dado el siguiente arreglo de objetos:
+    var people = [{id: 1, name: "John", age: 28 }, { id: 2, name: "Jane", age: 31 }, { id: 3, name: "Peter", age: 55 }];
+
+    Genera la función en javascript que filtre a las personas menores de 35 años.
+     */
+    var people = [{
+        id: 1,
+        name: "John",
+        age: 28
+    }, {
+        id: 2,
+        name: "Jane",
+        age: 31
+    }, {
+        id: 3,
+        name: "Peter",
+        age: 55
+    }];
+    let approved = people.filter(people => people.age < 35);
+    
+    console.log(approved)
+</script>
+
+</html>

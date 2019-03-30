@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+       e) Teniendo el siguiente objeto: 
+       var object = { 
+           key1: 10,
+           key2: 3,
+           key3: 40,
+           key4: 20
+       };
+       Generar la función para pasar cada elemento ‘key’ a un arreglo y ordenarlos según su valor.
+        */
+    var object = {
+        key1: 10,
+        key2: 3,
+        key3: 40,
+        key4: 20
+    };
+    var objectArray = Object.values(object);
+    console.log(objectArray);
+    console.log(objectArray.sort(function (a, b) {
+        return a - b;
+    }))
+</script>
+
+</html>

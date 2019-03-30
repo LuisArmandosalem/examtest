@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+
+
+</head>
+
+<body>
+ 
+</body>
+<script>
+    /*
+        a) Tiene dos arreglos de String, ‘clientes’ y ‘empleados’, 
+        y deseas combinarlas para crear una arreglo de contactos. 
+        ¿Qué método sería el más adecuado para esta tarea?
+        1. concat 
+        2. join
+        3. push 
+        4. splice 
+        Genera el código de ejemplo y describe el resultado en cada método.
+    */    
+        //////////////// ======>concat
+        //////// concatena el resultado puesto para la variable y se utiliza para unir dos o mas 
+        //////// cadenas de caratcter 
+          var clientes = ["lalo", "luis", "naye", "tomas"];
+          var empleados = ["jose", "marcos", "pepe", "manuel"];;
+          var resultado = clientes.concat(empleados);
+         console.log(resultado)
+        //////////////// ======>join
+        //////// la funcion join solo permite cancatenar un solo areglo 
+        //////// codigo
+        var clientes = ["lalo", "luis", "naye", "tomas"];
+        var empleados = ["jose", "marcos", "pepe", "manuel"];
+        var unir = clientes.join(' ') +' '+ empleados.join(' ');
+        console.log(unir);
+        //////////////// ======>push
+        //////// la funcion push solo permite anexar un caracter al arreglo 
+        //////// codigo
+        var clientes = ["lalo", "luis", "naye", "tomas"];
+        var empleados = ["jose", "marcos", "pepe", "manuel"];
+        var lol =clientes.push('losls')
+        console.log(lol)
+        //////////////// ======>splice
+        //////// la funcion splice solo permite cambiar un dato del arreglo
+        //////// codigo
+        var clientes = ["lalo", "luis", "naye", "tomas"];
+        clientes.splice(1, 0, 'dato cambiado de cliente');
+        var empleados = ["jose", "marcos", "pepe", "manuel"];
+        empleados.splice(1, 0, 'dato cambiado de empleado');
+        console.log(clientes);
+        console.log(empleados)
+    
+
+
+</script>
+
+</html>
